@@ -1,0 +1,11 @@
+.contenedorInicio{
+    background-color: #282c34;
+    margin: 0;
+    
+}
+h1{
+    color: #ed174b;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}

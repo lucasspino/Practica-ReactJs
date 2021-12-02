@@ -1,8 +1,8 @@
 import React from 'react'
 import NBA from '../images/NBALogo.png';
 import "./NavBar.css";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCartPlus} from '@fortawesome/free-solid-svg-icons'
+import { CartWidget } from './CartWidget';
+
 
 export const NavBar = () => {
     return (
@@ -20,9 +20,7 @@ export const NavBar = () => {
                     <li><a href="">Contacto</a></li>
                 </ul>
             </div>
-            <div className="cartIcon">
-                <FontAwesomeIcon icon={faCartPlus}/>
-            </div>
+           <CartWidget/>
         </header>
     )
 }
