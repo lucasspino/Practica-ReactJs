@@ -1,0 +1,14 @@
+.ItemCountDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+h3{
+    margin: 0%;
+    padding: 0.3rem;
+    color: azure;
+}
+button{
+    font-size: 1rem;
+    margin: 2px;
+}
