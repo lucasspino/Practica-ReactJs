@@ -10,6 +10,7 @@ export const NavBar = () => {
             <div>
                 <img
                     src={NBA}
+                    alt="Logo-NBA"
                     className="NBA-logo">
                 </img>
             </div>    
