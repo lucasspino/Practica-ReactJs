@@ -2,13 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { NavBar } from './components/NavBar/NavBar';
-import { ItemListContainer } from './components/Inicio/ItemListContainer';
+import ItemListContainer from "./components/Inicio/ItemListContainer";
 
 function App() {
   return (
     <>
     < NavBar />
-    <ItemListContainer ItemListContainer="NBA 75 Anniversary"/>
+    <ItemListContainer Anniversary="NBA 75 Anniversary"/>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
