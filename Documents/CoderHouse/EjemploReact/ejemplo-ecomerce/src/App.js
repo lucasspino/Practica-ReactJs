@@ -3,12 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import { NavBar } from './components/NavBar/NavBar';
 import ItemListContainer from "./components/Inicio/ItemListContainer";
+import ItemDetailContainer from './components/Inicio/ItemDetailContainer';
 
 function App() {
   return (
     <>
     < NavBar />
     <ItemListContainer Anniversary="NBA 75 Anniversary"/>
+    <ItemDetailContainer/>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
