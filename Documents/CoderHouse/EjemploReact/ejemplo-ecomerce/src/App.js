@@ -8,7 +8,7 @@ import ItemDetailContainer from './components/Inicio/ItemDetailContainer';
 function App() {
   return (
     <BrowserRouter>
-      <>
+      <div>
         <NavBar/>
         <Routes>
         <Route
@@ -23,11 +23,11 @@ function App() {
           />
           <Route
             exact
-            path="/detalle"
+            path="/detalle/:id"
             element={<ItemDetailContainer/>}
           />
         </Routes>
-      </>
+      </div>
     </BrowserRouter>
   );
 }

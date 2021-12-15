@@ -28,8 +28,8 @@ function ItemListContainer({Camisetas}) {
                 .finally(()=>setLoading(false))
             }
            
-        },[])
-        console.log(idCate)
+        },[idCate])
+        
     return (
         <div className="contenedorInicio">
             <h1> {Camisetas} </h1>

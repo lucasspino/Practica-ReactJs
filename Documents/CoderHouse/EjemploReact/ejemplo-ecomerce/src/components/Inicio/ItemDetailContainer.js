@@ -1,5 +1,5 @@
 import React from 'react'
-// import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import {getFetch} from './getFetch'
 import ItemDetail from './ItemDetail'
@@ -10,16 +10,15 @@ function ItemDetailContainer() {
     const [item, setItem] = useState([])
     const [loading, setLoading] = useState(true);
 
-    
+    const {id} = useParams()
 
     useEffect(()=>{
-        
         getFetch
-        .then(respuesta =>setItem(respuesta.find((item) => item.id === 1)))
-        .catch(error => console.log(error))
+        .then(resp =>setItem(resp.find((item)=>item.id===parseInt(id))))
+        .catch(err =>console.log(err))
         .finally(()=>setLoading(false))
-
-    },[])
+        
+    },[id])
 
 
     return (
