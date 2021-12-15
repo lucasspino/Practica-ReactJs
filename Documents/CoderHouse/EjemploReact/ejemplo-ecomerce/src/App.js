@@ -1,5 +1,5 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { NavBar } from './components/NavBar/NavBar';
 import ItemListContainer from "./components/Inicio/ItemListContainer";
@@ -7,27 +7,28 @@ import ItemDetailContainer from './components/Inicio/ItemDetailContainer';
 
 function App() {
   return (
-    <>
-    < NavBar />
-    <ItemListContainer Anniversary="NBA 75 Anniversary"/>
-    <ItemDetailContainer/>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    </>
+    <BrowserRouter>
+      <>
+        <NavBar/>
+        <Routes>
+        <Route
+            exact
+            path="/"
+            element={<ItemListContainer Camisetas="Camisetas"/>}
+          />
+          <Route
+            exact
+            path="/categoria/:idCate"
+            element={<ItemListContainer Camisetas="Camisetas"/>}
+          />
+          <Route
+            exact
+            path="/detalle"
+            element={<ItemDetailContainer/>}
+          />
+        </Routes>
+      </>
+    </BrowserRouter>
   );
 }
 

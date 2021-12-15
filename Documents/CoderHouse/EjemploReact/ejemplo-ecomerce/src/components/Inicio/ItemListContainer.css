@@ -1,11 +1,21 @@
 .contenedorInicio{
     background-color: #282c34;
     margin: 0;
+    bottom: 0;  
+}
+.divProductosCamisetas{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 h1{
     color: #ed174b;
     text-align: center;
-    margin: 0;
+    margin: 2rem;
     padding: 1rem;
 }

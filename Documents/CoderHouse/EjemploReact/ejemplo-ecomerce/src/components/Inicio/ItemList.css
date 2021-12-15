@@ -1,4 +1,33 @@
 .CamisetaProducto{
     width: 10rem;
     height: auto;
+    border-radius: 1rem;
+    
+}
+.cardCamiseta{
+    border: solid 1px #61dafb;
+    border-radius: 1rem;
+    height: 20rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+.buttomDetalle{
+    background-color: transparent;
+    border: solid 1px #61dafb;
+    border-radius: 0.75rem;
+    padding: 0.15rem;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.title{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+span{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
 }

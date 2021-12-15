@@ -24,7 +24,7 @@ export default function ItemCount (props){
     
     return(
         <div className='ItemCountDiv'>
-            <h3>Contador</h3>
+            {/* <h3>Contador</h3> */}
             <h3>{contador}</h3> 
             <div>
                 <button onClick={sumar}>+</button>

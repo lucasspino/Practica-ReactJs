@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import React from 'react'
 import NBA from '../images/NBALogo.png';
 import "./NavBar.css";
@@ -16,9 +17,9 @@ export const NavBar = () => {
             </div>    
             <div>
                 <ul className="ListaNav">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Productos</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><Link to='/'>Inicio</Link></li>
+                    <li><Link to='/categoria/camisetas'>Remeras</Link></li>
+                    <li><Link to='/categoria/gorras'>Gorras</Link></li>
                 </ul>
             </div>
            <CartWidget/>

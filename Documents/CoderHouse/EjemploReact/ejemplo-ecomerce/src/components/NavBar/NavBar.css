@@ -1,7 +1,7 @@
 .header{
     display: flex;
     justify-content: space-evenly;
-    height: 4rem;
+    height: 4.5rem;
     background-color: #282c34;
     border-bottom: solid 1px #61dafb;
     
@@ -13,6 +13,7 @@ div{
 .NBA-logo{
     height: 4rem;
     padding: 0%;
+    
 }
 .ListaNav{
     display: flex;
