@@ -1,19 +1,32 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
-export const CartContext = createContext([])
+const CartContext = createContext([])
+
+export const useCartContext = ()=> useContext(CartContext)
 
 function CartContextProvider({ children }){
 
     const [cartList, setCartList]= useState([])
+    function deleteCart (){
+        setCartList([])
+    }
 
-    function addToCart(item) {
-        setCartList([...cartList, item])
+    function addDuplicated(item){
+        const index = cartList.findIndex(i=> i.id === item.id)
+        if (index > -1){
+            const itemCart = cartList[index].cantidad
+            cartList.splice(index, 1)
+            setCartList([...cartList,{...item, cantidad: item.cantidad + itemCart}])
+        }else{
+            setCartList([...cartList, item])
+        }
     }
 
     return(
         <CartContext.Provider value={{
             cartList, 
-            addToCart 
+            addDuplicated,
+            deleteCart 
             }}>
             {children}
 

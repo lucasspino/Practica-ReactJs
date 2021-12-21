@@ -1,22 +1,24 @@
 import React from 'react';
 import ItemCount from './ItemCount'
 import './ItemDetail.css'
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import {Link} from 'react-router-dom'
-import { CartContext } from '../Context/CartContext';
+import { useCartContext } from '../Context/CartContext';
+
 
 function ItemDetail({item}) {
     
     const [goCart, setGoCart] = useState(true);
 
-    const {cartList, addToCart}= useContext(CartContext)
+    const {cartList, addDuplicated}= useCartContext()
 
     const onAdd =(quantityToAdd)=>{
         console.log(quantityToAdd);
-        addToCart({...item, cantidad:quantityToAdd})
+        addDuplicated({...item, cantidad:quantityToAdd})
         setGoCart(false);
-        console.log(cartList)
+        
     }
+    console.log(cartList)
 
     return (
         <div className='divDetail' key={item.id}>
