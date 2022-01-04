@@ -1,10 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import {getFetch} from './getFetch'
+// import {getFetch} from './getFetch'
 import ItemDetail from './ItemDetail'
 import './ItemDetailContainer.css'
 
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
 
 function ItemDetailContainer() {
     const [item, setItem] = useState({})
@@ -13,10 +14,16 @@ function ItemDetailContainer() {
     const {id} = useParams()
 
     useEffect(()=>{
-        getFetch
-        .then(resp =>setItem(resp.find((item)=>item.id===parseInt(id))))
-        .catch(err =>console.log(err))
+        const db= getFirestore()
+        const queryDb = doc(db, 'items', id)
+        getDoc(queryDb)
+        .then(resp=>setItem({id: resp.id, ...resp.data()}))
+        .catch(err=>console.log(err))
         .finally(()=>setLoading(false))
+        // getFetch
+        // .then(resp =>setItem(resp.find((item)=>item.id===parseInt(id))))
+        // .catch(err =>console.log(err))
+        // .finally(()=>setLoading(false))
         
     },[id])
 
