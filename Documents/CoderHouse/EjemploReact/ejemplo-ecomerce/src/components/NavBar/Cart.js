@@ -15,6 +15,7 @@ function Cart(){
                                  : <div><p>Cantidad total de productos: {addQuantity()}</p> 
                                         <p> Precio total: ${addPrice()}</p>
                                         <button onClick={deleteCart}>Borrar</button>
+                                        <Link to="/FormCart"><button>Finalizar Compra</button></Link>
                                     </div>}
 
         </div>

@@ -5,10 +5,10 @@ import ItemList from "./ItemList";
 import "./ItemListContainer.css";
 // import { getFetch } from "./getFetch";
 import { useState, useEffect } from "react";
-import {collection, doc, getDoc, getFirestore, getDocs, query, where} from 'firebase/firestore'
+import {collection, getFirestore, getDocs, query, where} from 'firebase/firestore'
 
 
-function ItemListContainer({Camisetas}) {
+function ItemListContainer({Productos}) {
 
         const [productos, setProductos] = useState([]);
         // const [producto, setProducto] = useState({});
@@ -38,7 +38,7 @@ function ItemListContainer({Camisetas}) {
 
     return (
         <div className="contenedorInicio">
-            <h1> {Camisetas} </h1>
+            <h1> {Productos} </h1>
             {/* <ItemCount/> */}
             <div className="divProductosCamisetas">
                 { loading ? <h2>Cargando...</h2> : <ItemList productos={productos}/> }
