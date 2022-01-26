@@ -3,7 +3,7 @@ E-commerce project for practice of course of React js in CoderHouse
 
 ## _Demo_
 
-[![](https://a.espncdn.com/combiner/i?img=/i/espn/misc_logos/500/nba.png)]()
+[![](https://a.espncdn.com/combiner/i?img=/i/espn/misc_logos/500/nba.png)](https://loving-goldwasser-571e16.netlify.app)
 
 ## _Clone repository_
 ```sh
