@@ -4,5 +4,15 @@
     margin-bottom: auto;
     color: #ed174b;
     cursor: pointer;
-    
+    display: flex;
+    text-align: center;
+}
+.incon-circle{
+    width: 1.2rem;
+    height:1.2rem;
+    background-color: transparent;
+    border: solid #61dafb 1px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50%;
 }

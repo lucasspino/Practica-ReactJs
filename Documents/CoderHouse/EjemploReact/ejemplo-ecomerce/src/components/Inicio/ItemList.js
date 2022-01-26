@@ -3,10 +3,10 @@ import Item from "./Item";
 import "./ItemList.css";
 
 
-function ItemList ( { productos } ){
-  return(
+function ItemList({ products }) {
+  return (
     <>
-      { productos.map((prod) => <Item prod= {prod} />) }
+      {products.map((prod) => <Item key={prod.id} prod={prod} />)}
     </>
   )
 }
@@ -15,4 +15,3 @@ export default ItemList
 
 
 
-    

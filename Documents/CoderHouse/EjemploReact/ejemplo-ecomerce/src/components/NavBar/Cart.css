@@ -1,0 +1,29 @@
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+p{
+    font-size: 16px;
+    color: #f5f5f5;
+    margin: 1rem;
+    
+}
+.cartCard{
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    list-style-type: none;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%) 1;
+    
+}
+.cartCardContainer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}

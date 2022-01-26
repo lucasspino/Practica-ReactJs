@@ -1,0 +1,17 @@
+.formContent{
+    text-align: center
+}
+input{
+    height: 2rem;
+    width: 15rem;
+    margin: .5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent ;
+    border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%) 1;
+    color: #3acfd5;
+}
+input:focus{
+    outline: none;
+    color: #3acfd5;
+}

@@ -1,26 +1,25 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./ItemCount.css"
 
 
-const ItemCount = ({stock, onAdd})=>{
+const ItemCount = ({ stock, onAdd }) => {
 
-    const [contador, setContador] = useState(1);
+    const [count, setCount] = useState(1);
 
-    const sumar = ()=>{
-        contador !== stock && setContador(contador + 1);
+    const add = () => {
+        count !== stock && setCount(count + 1);
     }
-    const restar = ()=>{
-        contador !== 0 && setContador(contador - 1)
+    const substract = () => {
+        count !== 0 && setCount(count - 1)
     }
 
-    return(
+    return (
         <div className='ItemCountDiv'>
-            {/* <h3>Contador</h3> */}
-            <h3>{contador}</h3> 
+            <h3>{count}</h3>
             <div>
-            <button onClick={sumar}>+</button>
-            <button onClick={restar}>-</button>
-            <button disabled={contador === 0} onClick={()=> onAdd(contador)}>Agregar al Carrito</button>
+                <button onClick={add}>+</button>
+                <button onClick={substract}>-</button>
+                <button disabled={count === 0} onClick={() => onAdd(count)}>Agregar al Carrito</button>
             </div>
         </div>
     )
